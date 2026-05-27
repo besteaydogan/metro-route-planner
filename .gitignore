@@ -177,3 +177,5 @@ frontend/dist/
 # PyPI configuration file
 .pypirc
 frontend/tsconfig.tsbuildinfo
+__pycache__/
+*.pyc
