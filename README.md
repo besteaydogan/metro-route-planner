@@ -1,4 +1,4 @@
-# MetroRoute Planner
+# Metro Route Planner
 
 MetroRoute Planner, tek dosyalik Python metro simülasyonunu full-stack bir rota optimizasyon ürününe dönüştüren portfolyo projesidir. Uygulama FastAPI, MongoDB, React TypeScript ve Docker Compose ile çalışır.
 
