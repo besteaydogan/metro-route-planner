@@ -170,5 +170,10 @@ cython_debug/
 # Ruff stuff:
 .ruff_cache/
 
+# Node / Vite
+node_modules/
+frontend/dist/
+
 # PyPI configuration file
 .pypirc
+frontend/tsconfig.tsbuildinfo
