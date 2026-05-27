@@ -1,0 +1,301 @@
+:root {
+  color: #17212b;
+  background: #f5f7f8;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+select {
+  font: inherit;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 28px;
+}
+
+.topbar {
+  align-items: end;
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  margin: 0 auto 24px;
+  max-width: 1180px;
+}
+
+.topbar p {
+  color: #607080;
+  font-size: 0.92rem;
+  margin: 0 0 6px;
+}
+
+.topbar h1 {
+  font-size: 2.3rem;
+  letter-spacing: 0;
+  line-height: 1;
+  margin: 0;
+}
+
+.status {
+  background: #e7f5ef;
+  border: 1px solid #b7dfcf;
+  border-radius: 999px;
+  color: #17664a;
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+
+.workspace {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(280px, 380px) 1fr;
+  margin: 0 auto 18px;
+  max-width: 1180px;
+}
+
+.planner-panel,
+.result-panel,
+.map-panel {
+  background: #ffffff;
+  border: 1px solid #dce3e8;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(23, 33, 43, 0.07);
+}
+
+.planner-panel {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+}
+
+.field span {
+  color: #495866;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.field select {
+  border: 1px solid #c8d2da;
+  border-radius: 7px;
+  min-height: 44px;
+  padding: 0 12px;
+}
+
+.strategy-group {
+  display: grid;
+  gap: 8px;
+}
+
+.strategy {
+  align-items: start;
+  background: #f8fafb;
+  border: 1px solid #d9e1e7;
+  border-radius: 7px;
+  color: #17212b;
+  cursor: pointer;
+  display: grid;
+  gap: 3px;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.strategy span {
+  color: #657686;
+  font-size: 0.84rem;
+}
+
+.strategy.active {
+  background: #e8f1ff;
+  border-color: #276ef1;
+}
+
+.notice,
+.error {
+  border-radius: 7px;
+  margin: 0;
+  padding: 10px 12px;
+}
+
+.notice {
+  background: #fff6df;
+  color: #77540b;
+}
+
+.error {
+  background: #ffeceb;
+  color: #9b2520;
+}
+
+.submit-button {
+  align-items: center;
+  background: #17212b;
+  border: 0;
+  border-radius: 7px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 9px;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 16px;
+}
+
+.submit-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.result-panel {
+  min-height: 286px;
+  padding: 18px;
+}
+
+.result-panel.empty {
+  align-items: center;
+  color: #6b7b89;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.metrics {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 18px;
+}
+
+.metrics div {
+  background: #f6f8fa;
+  border: 1px solid #dde5eb;
+  border-radius: 7px;
+  display: grid;
+  gap: 5px;
+  padding: 12px;
+}
+
+.metrics strong {
+  font-size: 1.35rem;
+}
+
+.metrics span {
+  color: #607080;
+  font-size: 0.85rem;
+}
+
+.path-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+}
+
+.path-list li {
+  background: #17212b;
+  border-radius: 999px;
+  color: #ffffff;
+  padding: 8px 12px;
+}
+
+.segments {
+  display: grid;
+  gap: 8px;
+}
+
+.segment {
+  align-items: center;
+  background: #fbfcfd;
+  border: 1px solid #e2e8ed;
+  border-radius: 7px;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 56px 1fr 64px;
+  padding: 10px;
+}
+
+.segment span:nth-child(2) {
+  background: #e7f5ef;
+  border-radius: 999px;
+  color: #17664a;
+  justify-self: center;
+  padding: 4px 8px;
+}
+
+.map-panel {
+  margin: 0 auto;
+  max-width: 1180px;
+  overflow: hidden;
+  padding: 14px;
+}
+
+.map-panel svg {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.station {
+  fill: #ffffff;
+  stroke: #17212b;
+  stroke-width: 3;
+}
+
+.station.selected {
+  fill: #ffd166;
+}
+
+text {
+  fill: #17212b;
+  font-size: 13px;
+  font-weight: 700;
+  paint-order: stroke;
+  stroke: #ffffff;
+  stroke-width: 4px;
+}
+
+@media (max-width: 820px) {
+  .page {
+    padding: 18px;
+  }
+
+  .topbar {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics,
+  .segment {
+    grid-template-columns: 1fr;
+  }
+}
